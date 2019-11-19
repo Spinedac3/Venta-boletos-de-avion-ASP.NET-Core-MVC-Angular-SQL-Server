@@ -1,0 +1,134 @@
+<br>
+<div class="container"style="background-color: white">
+    <div class="row">
+        <div class="carta card card-body col-md-8">
+            <div class="card row">
+                <div class="card-header">
+                    <h4>Informacion Personal</h4>
+                </div>
+                <div class="card-body">
+                    <p class="lead">Informacion Personal</p>
+                    <div class="row">
+                        <div class="col-md-6">
+                            <label class="form-group">Nombres</label>
+                            <input type="text" class="form-control">
+                        </div>
+                        <div class="col-md-6">
+                            <label class="form-group">Apellidos</label>
+                            <input type="text" class="form-control">
+                        </div>
+                    </div>
+                    <br>
+                    <div class="row">
+                        <div class="col-md-6">
+                            <label class="form-group">Tipo de Documento</label> <br />
+                            <p-dropdown [options]="tipos" [(ngModel)]="this.dataService.seleccion.pasajero.tipoDocumento" editable="true" placeholder="Seleccione Tipo"
+                                        autoWidth="false" [style]="{'width':'100%'}"></p-dropdown>
+                        </div>
+                        <div class="col-md-6">
+                            <label class="form-group">no. Identificacion</label>
+                            <input type="number" class="form-control" [(ngModel)]=" this.dataService.seleccion.pasajero.numeroIdentificacion">
+                        </div>
+                    </div>
+                    <br>
+                    <div class="row">
+                        <div class="col-md-6">
+                            <label class="form-group">Correo Electronico</label>
+                            <input type="text" class="form-control">
+                        </div>
+                        <div class="col-md-6">
+                            <label class="form-group">no. Telefono</label>
+                            <input type="tel" class="form-control">
+                        </div>
+                    </div>
+                </div>
+
+            </div>
+            <br>
+            <div class="card row">
+                <div class="card-header">
+                    <h4>Informacion de Tarjeta</h4>
+                </div>
+                <div class="card-body">
+                    <p class="lead">Informacion de Tarjeta</p>
+                    <div class="row">
+                        <div class="col-md-6">
+                            <label class="form-group">Franquicia</label> <br />
+                            <p-dropdown [options]="franquicias" [(ngModel)]="this.dataService.seleccion.pasajero.tarjeta.franquicia" editable="true" placeholder="Seleccione Franquicia"
+                                        autoWidth="false" [style]="{'width':'100%'}"></p-dropdown>
+                        </div>
+                        <div class="col-md-6">
+                            <label class="form-group">Lugar de Emision de Tarjeta</label> <br />
+                            <p-dropdown [options]="lugares" [(ngModel)]="this.dataService.seleccion.pasajero.tarjeta.lugarEmision" editable="true" placeholder="Seleccione el Lugar"
+                                        autoWidth="false" [style]="{'width':'100%'}"></p-dropdown>
+                        </div>
+                    </div>
+                    <br>
+                    <div class="row">
+                        <div class="col-md-6">
+                            <label class="form-group">Numero de la Tarjeta</label>
+                            <input type="number" class="form-control" [(ngModel)]="this.dataService.seleccion.pasajero.tarjeta.numeroTarjeta">
+                        </div>
+                        <div class="col-md-6">
+                            <label class="form-group">Fecha Vencimiento</label>
+                            <input type="date" class="form-control" [(ngModel)]="this.dataService.seleccion.pasajero.tarjeta.fechaVencimiento">
+                        </div>
+                    </div>
+                    <br>
+                    <div class="row">
+                        <div class="col-md-6">
+                            <label class="form-group">Digitos de Seguridad</label>
+                            <input type="text" class="form-control" placeholder="CCV" [(ngModel)]="this.dataService.seleccion.pasajero.tarjeta.ccv">
+                        </div>
+
+                    </div>
+                </div>
+
+            </div>
+            <br>
+            <div class="card row">
+                <div class="card-header">
+                    <h4>Domicilio</h4>
+                </div>
+                <div class="card-body">
+                    <p class="lead">Domicilio</p>
+                    <div class="row">
+                        <div class="col-md-6">
+                            <label class="form-group">Pais</label>
+                           <input type="text" class="form-control" [(ngModel)]="this.dataService.seleccion.pasajero.domicilio" />
+                        </div>
+                        <div class="col-md-6">
+                            <label class="form-group">Dirección</label>
+                            <input type="text" class="form-control"  [(ngModel)]="this.dataService.seleccion.pasajero.direccion" >
+                        </div>
+                    </div>
+                    <br>
+                    <div class="row">
+                        <div class="col-md-6">
+                            <label class="form-group">Estado/Departamento</label>
+                            <input type="text" class="form-control"  [(ngModel)]="this.dataService.seleccion.pasajero.departamento " >
+                        </div>
+                        <div class="col-md-6">
+                            <label class="form-group">Ciudad</label>
+                            <input type="text" class="form-control"  [(ngModel)]="this.dataService.seleccion.pasajero.ciudad " >
+                        </div>
+                    </div>
+                    <br>
+                    <div class="row">
+                        <div class="col-md-6">
+                            <label class="form-group">Codigo Postal</label>
+                            <input type="text" class="form-control" placeholder="Codigo Postal"  [(ngModel)]="this.dataService.seleccion.pasajero.codigoPostal" >
+                        </div>
+
+                    </div>
+                </div>
+
+            </div>
+            <br />
+          
+        </div>
+        <div class="col-md-4">
+                <app-seleccion></app-seleccion>
+            </div>
+    </div>
+</div>

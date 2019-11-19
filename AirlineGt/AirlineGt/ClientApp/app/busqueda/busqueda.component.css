@@ -1,0 +1,51 @@
+.donde {
+    border-right: solid 1px black;
+}
+.carta {
+    background-color:#e6eaf0;
+    padding: 10px;
+}
+.cuadro {
+    border: solid 1px black;
+    margin-left: 40px;
+   
+}
+.busqueda {
+    padding: 10px;
+}
+.contador{
+    margin-left: 60px;
+    width: 25%;
+
+}
+
+.contador2{
+    margin-left: 72px;
+    width: 25%;
+
+}
+.subtexto {
+    margin-top: -8px;
+    font-size: 9px;
+}
+.calen input {
+    vertical-align: middle;
+	margin-right: 1px;
+}
+
+.seleccionado {
+    vertical-align:middle;
+    margin-left: .7em;
+    width: 100%;
+}
+
+.opcion {
+    position: relative;
+    width: 150px;
+}
+
+@media only screen and (max-width: 320px) {
+    .adonde {
+        margin-right: 40px;
+    }
+}

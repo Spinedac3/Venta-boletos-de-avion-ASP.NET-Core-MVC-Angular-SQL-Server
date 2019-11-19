@@ -1,0 +1,31 @@
+[
+	{
+		"idVuelo": 3,
+		"tipoVuelo": "Regreso",
+		"Origen": "Ciudad de Panama",
+		"Destino":"Ciudad de Guatemala",
+		"FechaPartida":"18/18/2019",
+		"PrecioTurista":400,
+		"HoraPartida":6.45,
+		"HoraLlegada":12.55,
+		"noParadas":1,
+		"noVueloEscala":"10213",
+		"noVueloEscalaDestino":"10391",		
+		"Duracion": 4
+	},
+	{
+		"idVuelo": 4,
+		"tipoVuelo": "Regreso",
+		"Origen": "Ciudad de Panama",
+		"Destino": "Ciudad de Guatemala",
+		"FechaPartida": "18/21/2019",
+		"PrecioTurista": 500,
+		"HoraPartida": 9.45,
+		"HoraLlegada": 3.55,
+		"noParadas": 1,
+		"noVueloEscala": "10213",
+		"noVueloEscalaDestino": "10391",
+		"Duracion": 6
+	}
+
+]

@@ -1,0 +1,67 @@
+
+    <div class="card card-body">
+        <h3 class="lead text-center"> <strong>Tu Selección</strong></h3>
+        <div class="pasajero"> {{dataService.seleccion.boletos.length}} Pasajero</div>
+        <div class="adulto"> {{dataService.seleccion.boletos.length}} Adulto</div>
+        <br>
+        <div class="table table-condensed table-hover">
+
+
+            <div *ngFor="let v of dataService.seleccion.boletos">
+                <p class="ida"> <i class="fa fa-plane fa-2x" aria-hidden="true"></i> <span class="vuelo">{{v.vuelo.origen }}   <i class="fa fa-arrow-right fa-bg" aria-hidden="true"></i> {{v.vuelo.destino}}</span>  </p>
+
+                <p class="vuelo">{{v.vuelo.fechaPartida.substring(0, 10)}}</p>
+                <p class="vuelo">Cantidad: {{v.cantidad}}</p>
+                <p class="vuelo">{{v.vuelo.precioTurista | currency:"USD"}} </p>
+                <br>
+            </div>
+
+        </div>
+        <div>Equipaje Extra: {{dataService.seleccion.maleta}}</div>
+        <div>Total: {{ dataService.seleccion.subtotal | currency:"USD"}}</div>
+        <br>
+        <div *ngIf="router.url == '/vuelosIda'">
+            <button class="btn enviar" *ngIf="dataService.seleccion.boletos.length > 0"
+                   (click)="vuelosRegreso()">
+                Continuar
+            </button>
+
+        </div>
+        <div *ngIf="router.url == '/soloIda'">
+            <button class="btn enviar" *ngIf="dataService.seleccion.boletos.length > 0"
+                   (click)="infoPasajero()">
+                Continuar
+            </button>
+
+        </div>
+        <div *ngIf="router.url == '/vuelosRegreso'">
+            <button class="btn enviar" *ngIf="dataService.seleccion.boletos.length > 0"
+                    (click)="infoPasajero()">
+                Continuar
+            </button>
+        </div>
+
+        <div *ngIf="router.url == '/infoPasajero'">
+            <button class="btn enviar" *ngIf="dataService.seleccion.boletos.length > 0"
+                  (click)="equipajeAdicional()">
+                Continuar
+            </button>
+        </div>
+
+        <div *ngIf="router.url == '/equipajeAdicional'">
+            <button class="btn enviar"
+                    (click)="pago()">
+                Continuar
+            </button>
+        </div>
+
+        <div *ngIf="router.url == '/pago'">
+            <button class="btn enviar"
+                    (click)="facturar()">
+                Pagar
+            </button>
+        </div>
+
+
+    </div>
+

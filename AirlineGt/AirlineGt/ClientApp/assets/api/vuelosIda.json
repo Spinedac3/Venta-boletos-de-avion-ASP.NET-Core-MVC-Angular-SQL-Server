@@ -1,0 +1,31 @@
+[
+	{
+		"idVuelo": 1,
+		"tipoVuelo": "Ida",
+		"Origen": "Ciudad de Guatemala",
+		"Destino":"Ciudad de Panama",
+		"FechaPartida":"09/18/2019",
+		"PrecioTurista":300,
+		"HoraPartida":6.45,
+		"HoraLlegada":12.55,
+		"noParadas":1,
+		"noVueloEscala":"10213",
+		"noVueloEscalaDestino":"10391",		
+		"Duracion": 4
+	},
+	{
+		"idVuelo": 2,
+		"tipoVuelo": "Ida",
+		"Origen": "Ciudad de Guatemala",
+		"Destino": "Ciudad de Panama",
+		"FechaPartida": "09/21/2019",
+		"PrecioTurista": 400,
+		"HoraPartida": 9.45,
+		"HoraLlegada": 3.55,
+		"noParadas": 1,
+		"noVueloEscala": "10213",
+		"noVueloEscalaDestino": "10391",
+		"Duracion": 6
+	}
+
+]

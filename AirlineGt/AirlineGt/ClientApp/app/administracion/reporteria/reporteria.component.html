@@ -1,0 +1,23 @@
+<div class="container">
+    <br>
+    <p-tabView>
+            <p-tabPanel header="Agosto" leftIcon="fa fa-bar-chart">
+               <div class="card card-body col-md-12 text-center">
+                    <p class="lead"> Destinos mas Solicitados</p>
+                    <p-chart type="bar" [data]="data"></p-chart>
+               </div>
+            </p-tabPanel>
+            <p-tabPanel header="Septiembre" leftIcon="fa fa-bar-chart">
+                    <div class="card card-body col-md-12 text-center">
+                            <p class="lead"> Destinos mas Solicitados</p>
+                            <p-chart type="bar" [data]="data2"></p-chart>
+                       </div>
+            </p-tabPanel>
+            <p-tabPanel header="Octubre" leftIcon="fa fa-bar-chart">
+                    <div class="card card-body col-md-12 text-center">
+                            <p class="lead"> Destinos mas Solicitados</p>
+                            <p-chart type="bar" [data]="data3"></p-chart>
+                       </div>
+            </p-tabPanel>
+        </p-tabView>
+</div>

@@ -1,0 +1,37 @@
+<br>
+<div class="container">
+    <div class="row">
+            <div class="carta  card card-body ">
+                <div class="row text-center ">
+                    <div class="col-md-12 text-center">
+                        <h4>Gracias por su Compra</h4>
+                    </div>
+                </div>
+                <div class="row text-center ">
+                        <div class="col-md-4 offset-md-4 text-center">
+                            <p><strong> Resumen Compra</strong></p>
+                        </div>
+                </div>
+                <div class="row text-center " *ngFor="let v of dataService.seleccion.boletos">
+                        <div class="col-md-6 offset-md-3 text-center">
+                            <p><label class="font-weight-bold">Vuelo: </label>{{v.vuelo.origen }} - {{v.vuelo.destino}} </p>
+                            <p class="font-weight-bold">Precio: {{v.vuelo.precioTurista | currency:"USD"}}</p>
+                            <p class="font-weight-bold">Fecha de Partida: {{v.vuelo.fechaPartida.substring(0, 10)}}</p>
+                            <p class="font-weight-bold">Hora Partida: {{v.vuelo.horaPartida}} pm</p>
+                            <p class="font-weight-bold">Hora Llegada: {{v.vuelo.horaLlegada}} pm</p>
+                            <p class="font-weight-bold">Duracion: {{v.vuelo.duracion}} horas</p>
+                        </div>
+                </div>
+                <div class="row">
+                    <div class="col-md-3 offset-md-5 "><strong>Equipaje Extra:</strong> {{ dataService.seleccion.maleta | currency:"USD"}}</div>
+                    <div class="col-md-3 offset-md-5 "><strong>Total:</strong> {{ dataService.seleccion.subtotal | currency:"USD"}}</div>
+                </div>
+                <div class="row">
+                    <div class="col-6 ">
+                        <button class="btn btn-outline-secondary" style='width:120px' (click)="nuevaCompra()"> <i class='fa fa-chevron-left'></i> Regresar </button>
+                    </div>
+                </div>
+            </div>
+    </div>
+</div>
+<br> <br> <br>  <br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br> <br><br><br><br>

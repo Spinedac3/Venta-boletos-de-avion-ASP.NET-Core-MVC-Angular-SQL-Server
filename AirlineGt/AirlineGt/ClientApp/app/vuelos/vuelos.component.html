@@ -1,0 +1,57 @@
+﻿<br>
+<div class="container">
+    <div class='card'>
+        <div class='card-header text-center'>
+            <h4 class="lead"><i class="fa fa-plane" aria-hidden="true"></i> Vuelos </h4>
+
+        </div>
+        <div class='card-body'>
+            <div class='row'>
+                <div class='col-md-4'>
+                    <input type='text' [(ngModel)]="listFilter" placeholder="Buscar"/> 
+                </div>
+            </div>
+        </div>
+        <div class='table-responsive'>
+            <table class='table'>
+                <thead class="bg-light">
+                    <tr>
+                        <th class="text-center">ID Vuelo</th>
+                        <th class="text-center">Origen</th>
+                        <th class="text-center">Destino</th>
+                        <th class="text-center">Fecha Partida</th>
+                        <th class="text-center">Precio Turista</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr *ngFor='let vuelo of filteredVuelos'>
+                        <td class="text-center"><a [routerLink]="['/vuelos',vuelo.id]">{{vuelo.id}}</a></td>
+                        <td class="text-center">{{vuelo.origen}}</td>
+                        <td class="text-center">{{vuelo.destino}}</td>
+                        <td class="text-center">{{vuelo.fechaPartida.substring(0, 10)}}</td>
+                        <td class="text-center">{{vuelo.precioTurista | currency}}</td>
+                    </tr>
+                </tbody>
+            </table>
+        </div>
+        <div class="card-footer">
+            <div class="col-md-3 offset-md-9 text-right">
+                <button class="btn btn-success" [routerLink]="['/crear']">Crear Vuelo</button>
+            </div>
+        </div>
+    </div>
+</div>
+<br />
+<br />
+<br />
+<br />
+<br />
+<br />
+<br />
+<br />
+<br />
+<br />
+<div *ngIf='errorMessage'
+     class='alert alert-danger'>
+    Error: {{ errorMessage }}
+</div>

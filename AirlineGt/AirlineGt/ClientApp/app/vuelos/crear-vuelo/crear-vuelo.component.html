@@ -1,0 +1,118 @@
+﻿<br />
+<div class="container">
+    <div>
+        <div class="carta card card-body col-md-7 offset-2">
+            <div class="row">
+                <div class="col-md-4 text-right">
+                    <label class="form-group ">Origen </label>
+
+                </div>
+                <div class="col-md-8">
+                    <p-dropdown [options]="origenes" [(ngModel)]="selectedOrigenes" editable="true" placeholder="Seleccione Origen"
+                                autoWidth="false" [style]="{'width':'100%'}"></p-dropdown>
+                </div>
+            </div>
+            <div class="row">
+                <div class="col-md-4 text-right">
+                    <label class="form-group ">Destino </label>
+
+                </div>
+                <div class="col-md-8">
+                    <p-dropdown [options]="destinos" [(ngModel)]="selectedDestinos" editable="true" placeholder="Seleccione Destino"
+                                autoWidth="false" [style]="{'width':'100%'}"></p-dropdown>
+                </div>
+                </div>
+           
+            <div class="row">
+                <div class="col-md-4 text-right">
+                    <label class="form-group ">Fecha Partida </label>
+
+                </div>
+                <div class="col-md-8">
+                    <p-calendar [(ngModel)]="fechaPartida" [showIcon]="true" [inputStyle]="{'width':'75%'}"></p-calendar>
+                </div>
+            </div>
+            <div class="row">
+                <div class="col-md-4 text-right">
+                    <label class="form-group" >Precio Turista </label>
+
+                </div>
+                <div class="col-md-8">
+                    <input type="number" class="form-control" [(ngModel)]="precioTurista"/>
+                </div>
+            </div>
+            <div class="row">
+                <div class="col-md-4 text-right">
+                    <label class="form-group">Precio Ejecutivo </label>
+
+                </div>
+                <div class="col-md-8">
+                    <input type="number" class="form-control" [(ngModel)]="precioEjecutivo"/> 
+                </div>
+            </div>
+            <div class="row">
+                <div class="col-md-4 text-right">
+                    <label class="form-group ">Hora Partida </label>
+
+                </div>
+                <div class="col-md-8">
+                    <input type="number" class="form-control" [(ngModel)]="horaPartida" />
+                </div>
+            </div>
+            <div class="row">
+                <div class="col-md-4 text-right">
+                    <label class="form-group ">Hora Llegada </label>
+
+                </div>
+                <div class="col-md-8">
+                    <input type="number" class="form-control" [(ngModel)]="horaLlegada" />
+                </div>
+            </div>
+            <div class="row">
+                <div class="col-md-4 text-right">
+                    <label class="form-group ">Numero Paradas </label>
+
+                </div>
+                <div class="col-md-8">
+                    <input type="number" class="form-control" [(ngModel)]="noParadas" />
+                </div>
+            </div>
+            <div class="row">
+                <div class="col-md-4 text-right">
+                    <label class="form-group ">Vuelo de Escala </label>
+
+                </div>
+                <div class="col-md-8">
+                    <input type="text" class="form-control" [(ngModel)]="noVueloEscala" />
+                </div>
+            </div>
+            <div class="row">
+                <div class="col-md-4 text-right">
+                    <label class="form-group ">Vuelo Destino </label>
+
+                </div>
+                <div class="col-md-8">
+                    <input type="text" class="form-control" [(ngModel)]="noVueloDestino" />
+                </div>
+            </div>
+            <div class="row">
+                <div class="col-md-4 text-right">
+                    <label class="form-group ">Duracion </label>
+
+                </div>
+                <div class="col-md-8">
+                    <input type="number" class="form-control" [(ngModel)]="duracion" />
+                </div>
+            </div>
+            <div class="row">
+                <div class="col-md-6 ">
+                    <button class="btn btn-outline-secondary" style='width:120px' [routerLink]="['/vuelos']"> <i class='fa fa-chevron-left'></i> Regresar </button>
+                </div>
+                <div class="col-md-6 ">
+                    <button class="btn btn-success" style='width:120px' (click)="crear()" >  Crear Vuelo </button>
+                </div>
+            </div>
+        </div>
+    </div>
+    <br /><br /> <br /> <br /> <br /> <br />
+</div>

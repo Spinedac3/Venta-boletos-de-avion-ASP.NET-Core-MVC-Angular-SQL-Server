@@ -1,0 +1,72 @@
+.carta {
+    background-color:#e6eaf0;
+    padding-bottom: 100px;
+}
+.carta2{
+    background-color: white;
+    margin: 10px;
+    
+}
+
+body {
+    background-color: #007ad9;
+}
+.ida {
+    font-size: 20px;
+    font-weight: bold;
+}
+
+.clase {
+    padding: 10px;
+    width: 100px;
+    height: 50px;
+}
+
+.info {
+    font-size: 12px;
+}
+
+.cuerpo {
+    background-color: white;
+    margin: 10px;
+    padding: 15px;
+}
+
+.ejec {
+    margin-left: 20px;
+}
+
+.clas{
+    height: 150px;
+    border: solid 1px black;
+}
+
+.clas:hover{
+    height: 150px;
+    border: solid 2px black;
+}
+
+.precio {
+    font-size: 18px;
+    margin-top:35px;
+   
+}
+
+.ejecu {
+    background-color:black;
+    color: white;
+    border: solid 1px black;
+
+}
+
+.econo {
+    background-color: #007ad9;
+    color: white;
+    border: solid 1px black;
+    margin-left: 25px;
+}
+
+.container {
+    padding: 30px;
+
+}

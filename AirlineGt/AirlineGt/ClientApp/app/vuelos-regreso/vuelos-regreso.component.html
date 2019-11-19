@@ -1,0 +1,68 @@
+<br>
+<div class="container"style="background-color: white">
+
+    <div class="row">
+        <div class="carta card card-body col-md-8">
+            <div class="row">
+                <div class="col-md-6 text-right">
+                    <p class="ida">Regreso</p>
+                </div>
+                <div class="col-md-3 text-center" *ngIf="vuelos.length">
+                      <p>  <i class="fa fa-calendar fa-2x" aria-hidden="true"></i> <strong>{{vuelos[0].fechaPartida.substring(0, 10)}}</strong></p>
+                </div>
+                <div class="col-md-3"></div>
+           </div>
+           <div class="row">
+                <div class="col-md-6 text-right" *ngIf="vuelos.length">
+                     <p> <i class="fa fa-plane fa-2x" aria-hidden="true"></i> <strong>{{vuelos[0].origen}}</strong> </p>
+                </div>
+                <div class="col-md-1 text-center">
+                        <i class="fa fa-arrow-right fa-2x" aria-hidden="true"></i>
+                </div>
+                <div class="col-md-5 text-lelft" *ngIf="vuelos.length">
+                      <p> <i class="fa fa-plane fa-2x" aria-hidden="true"></i> <strong>{{vuelos[0].destino}}</strong></p>
+                </div>
+                <div class="col-md-3"></div>
+           </div>
+           <br>
+           <div class="container"  *ngFor='let vuelo of vuelos'>
+                <div class="row" >
+                    <div class="col-md-5"></div>
+                    <div class="col-md-2 econo clase card card-body text-center">
+                        <p>Economica</p>
+                    </div>
+                    <div class="col-md-1"></div>
+                    <div class="col-md-2 ejecu clase card card-body text-center">
+                        <p>Ejecutiva</p>
+                    </div>
+                    <div class="col-md-2"></div>
+                </div>
+                <div class="row cuerpo" >
+                        <div class="col-md-5">
+                            <p>
+                                {{vuelo.horaPartida }} pm <i class="fa fa-arrow-right" aria-hidden="true"></i> {{ vuelo.horaLlegada}}
+                                <span class="parada"> Paradas: {{vuelo.noParadas}} </span>
+                            </p>
+                                <p>Duración: {{vuelo.duracion}} horas</p> 
+                                
+                                <p>Vuelo hacia Escala: {{vuelo.noVueloEscala}}</p>
+                                <p>Escala a Destino: {{vuelo.noVueloDestino}}</p>
+                            </div>
+                        <div class="col-md-3 clas card card-body text-center" (click)="anadirASeleccion(vuelo)">
+                            <p class="precio">{{vuelo.precioTurista | currency:"USD"}}</p>
+                        </div>
+                       
+                        <div class="col-md-3 clas ejec card card-body text-center">
+                            <p class="precio"> N/A</p>
+                        </div>
+                        <div class="col-md-1"></div>
+                </div>
+                
+            </div>
+        </div>
+        <div class="col-md-4">
+            <app-seleccion></app-seleccion>
+        </div>
+    </div>
+</div>
+<br>

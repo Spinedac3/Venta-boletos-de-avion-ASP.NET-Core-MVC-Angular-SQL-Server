@@ -1,0 +1,10 @@
+{
+  "ConnectionStrings": {
+    "ConnectionString": "server=(localdb)\\ProjectsV13;Database=AirlineDb;Integrated Security=true;MultipleActiveResultSets=true;"
+  },
+  "Tokens": {
+    "key": "qwienoqidniqnwdoiqwoidqio11",
+    "Issuer": "http://localhost:8888",
+    "Audience": "users"
+  }
+}

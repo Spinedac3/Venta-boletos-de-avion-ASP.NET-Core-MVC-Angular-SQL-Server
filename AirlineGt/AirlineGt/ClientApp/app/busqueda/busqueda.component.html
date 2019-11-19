@@ -1,0 +1,149 @@
+<br>
+<div class="container">
+    <p-tabView>
+        <p-tabPanel header="Ida y Vuelta">
+            <div class="row busqueda">
+                <div class="carta  card card-body col-md-12">
+                    <div class="row">
+                        <div class="donde col-sm-5">
+                            <h5 class="text-center lead">¿Hacia donde Viajas?</h5>
+                            <br>
+                            <div class="row">
+                                <div class="col-sm-1"></div>
+                                <div class="col-sm-4 e">
+                                    <p>Desde: </p>
+                                    <p-dropdown [options]="origen" [(ngModel)]="selectedOrigen" filter="true">
+                                        <ng-template let-item pTemplate="selectedItem">
+
+                                            <span class="seleccionado">{{item.label}}</span>
+                                        </ng-template>
+                                        <ng-template let-ori pTemplate="item">
+                                            <div class="opcion ui-helper-clearfix">
+
+                                                <div style="font-size:14px;float:right;margin-top:7px">{{ori.label}}</div>
+                                            </div>
+                                        </ng-template>
+                                    </p-dropdown>
+
+                                </div>
+                                <div class="col-sm-1"></div>
+                                <div class="col-sm-6">
+                                    <p>Hacia: </p>
+                                    <p-dropdown [options]="destino" [(ngModel)]="selectedDestino" filter="true">
+                                        <ng-template let-item pTemplate="selectedItem">
+
+                                            <span class="seleccionado">{{item.label}}</span>
+                                        </ng-template>
+                                        <ng-template let-dest pTemplate="item">
+                                            <div class="opcion ui-helper-clearfix">
+
+                                                <div style="font-size:14px;float:right;margin-top:7px">{{dest.label}}</div>
+                                            </div>
+                                        </ng-template>
+                                    </p-dropdown>
+
+                                </div>
+                            </div>
+
+                        </div>
+                        <div class="donde col-sm-5">
+                            <h5 class="text-center lead">¿Cuando Viajas?</h5>
+                            <br>
+                            <div class="row">
+                                <div class="col-sm-1"></div>
+                                <div class="col-sm-5">
+                                    <p>Fecha Partida: </p>
+                                    <p-calendar [(ngModel)]="fechaPartida" [showIcon]="true" [inputStyle]="{'width':'75%'}"></p-calendar>
+                                </div>
+
+                                <div class="col-sm-5">
+                                    <p>Fecha de Regreso: </p>
+                                    <p-calendar [(ngModel)]="fechaRegreso" [showIcon]="true" [inputStyle]="{'width':'75%'}"></p-calendar>
+                                </div>
+                            </div>
+
+                        </div>
+
+
+                    </div>
+                    <br>
+                    <div class="row">
+                        <div class="col-md-2 offset-md-10">
+                            <button pButton type="button" label="Buscar" class="ui-button-raised ui-button-info" (click)="FiltrarIda(vuelos,selectedOrigen,selectedDestino,fechaPartida,fechaRegreso)"></button>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </p-tabPanel>
+        <p-tabPanel header="Solo Ida">
+            <div class="row busqueda">
+                <div class="carta  card card-body col-md-12">
+                    <div class="row ">
+                        <div class="donde col-md-5">
+                            <h5 class="text-center lead">¿Hacia donde Viajas?</h5>
+                            <br>
+                            <div class="row">
+                                <div class="col-sm-1"></div>
+                                <div class="col-sm-4">
+                                    <p>Desde: </p>
+                                    <p-dropdown [options]="origen" [(ngModel)]="selectedOrigen" filter="true">
+                                        <ng-template let-item pTemplate="selectedItem">
+
+                                            <span class="seleccionado">{{item.label}}</span>
+                                        </ng-template>
+                                        <ng-template let-ori pTemplate="item">
+                                            <div class="opcion ui-helper-clearfix">
+
+                                                <div style="font-size:14px;float:right;margin-top:7px">{{ori.label}}</div>
+                                            </div>
+                                        </ng-template>
+                                    </p-dropdown>
+
+                                </div>
+                                <div class="col-sm-1"></div>
+                                <div class="col-sm-6">
+                                    <p>Hacia: </p>
+                                    <p-dropdown [options]="destino" [(ngModel)]="selectedDestino" filter="true">
+                                        <ng-template let-item pTemplate="selectedItem">
+
+                                            <span class="seleccionado">{{item.label}}</span>
+                                        </ng-template>
+                                        <ng-template let-dest pTemplate="item">
+                                            <div class="opcion ui-helper-clearfix">
+
+                                                <div style="font-size:14px;float:right;margin-top:7px">{{dest.label}}</div>
+                                            </div>
+                                        </ng-template>
+                                    </p-dropdown>
+
+                                </div>
+                            </div>
+
+                        </div>
+                        <div class="donde col-sm-5">
+                            <h5 class="text-center lead">¿Cuando Viajas?</h5>
+                            <br>
+                            <div class="row">
+                                <div class="col-sm-1"></div>
+                                <div class="col-sm-5">
+                                    <p>Fecha Partida: </p>
+                                    <p-calendar [(ngModel)]="fechaPartida" [showIcon]="true" [inputStyle]="{'width':'75%'}"></p-calendar>
+                                </div>
+                            </div>
+
+                        </div>
+
+
+                    </div>
+                    <br>
+                    <div class="row">
+                        <div class="col-md-2 offset-md-10">
+                            <button pButton type="button" label="Buscar" class="ui-button-raised ui-button-info" (click)="FiltrarIda2(vuelos,selectedOrigen,selectedDestino,fechaPartida,fechaRegreso)"></button>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </p-tabPanel>
+    </p-tabView>
+</div>
+<br> <br><br><br><br><br><br><br><br><br><br> <br> <br /> <br /> <br /> <br />

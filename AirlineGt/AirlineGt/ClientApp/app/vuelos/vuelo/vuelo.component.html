@@ -1,0 +1,112 @@
+﻿<br />
+<div class="container">
+    <div>
+        <div class="carta card card-body col-md-7 offset-2">
+            <div class="row">
+                <div class="col-md-4 text-right">
+                    <label class="form-group ">Origen </label>
+
+                </div>
+                <div class="col-md-8">
+                    <input type="text" class="form-control" value="{{vuelo.origen}}" readonly />
+                </div>
+            </div>
+            <div class="row">
+                <div class="col-md-4 text-right">
+                    <label class="form-group ">Destino </label>
+
+                </div>
+                <div class="col-md-8">
+                    <input type="text" class="form-control" value="{{vuelo.destino}}" readonly />
+                </div>
+            </div>
+            <div class="row">
+                <div class="col-md-4 text-right">
+                    <label class="form-group ">Fecha Partida </label>
+
+                </div>
+                <div class="col-md-8">
+                    <input type="text" class="form-control" value="{{vuelo.fechaPartida.substring(0,10)}}" readonly />
+                </div>
+            </div>
+            <div class="row">
+                <div class="col-md-4 text-right">
+                    <label class="form-group ">Precio Turista </label>
+
+                </div>
+                <div class="col-md-8">
+                    <input type="text" class="form-control" value="{{vuelo.precioTurista | currency}}" readonly />
+                </div>
+            </div>
+            <div class="row">
+                <div class="col-md-4 text-right">
+                    <label class="form-group ">Precio Ejecutivo </label>
+
+                </div>
+                <div class="col-md-8">
+                    <input type="text" class="form-control" value="{{vuelo.precioEjecutivo | currency}}" readonly />
+                </div>
+            </div>
+            <div class="row">
+                <div class="col-md-4 text-right">
+                    <label class="form-group ">Hora Partida </label>
+
+                </div>
+                <div class="col-md-8">
+                    <input type="text" class="form-control" value="{{vuelo.horaPartida}} pm" readonly />
+                </div>
+            </div>
+            <div class="row">
+                <div class="col-md-4 text-right">
+                    <label class="form-group ">Hora Llegada </label>
+
+                </div>
+                <div class="col-md-8">
+                    <input type="text" class="form-control" value="{{vuelo.horaLlegada}} pm" readonly />
+                </div>
+            </div>
+            <div class="row">
+                <div class="col-md-4 text-right">
+                    <label class="form-group ">Numero Paradas </label>
+
+                </div>
+                <div class="col-md-8">
+                    <input type="text" class="form-control" value="{{vuelo.noParadas}}" readonly />
+                </div>
+            </div>
+            <div class="row">
+                <div class="col-md-4 text-right">
+                    <label class="form-group ">Vuelo de Escala </label>
+
+                </div>
+                <div class="col-md-8">
+                    <input type="text" class="form-control" value="{{vuelo.noVueloEscala}}" readonly />
+                </div>
+            </div>
+            <div class="row">
+                <div class="col-md-4 text-right">
+                    <label class="form-group ">Vuelo Destino </label>
+
+                </div>
+                <div class="col-md-8">
+                    <input type="text" class="form-control" value="{{vuelo.noVueloDestino}}" readonly />
+                </div>
+            </div>
+            <div class="row">
+                <div class="col-md-4 text-right">
+                    <label class="form-group ">Duracion </label>
+
+                </div>
+                <div class="col-md-8">
+                    <input type="text" class="form-control" value="{{vuelo.duracion}} hrs" readonly />
+                </div>
+            </div>
+            <div class="row">
+                <div class="col-md-6 ">
+                    <button class="btn btn-outline-secondary" style='width:120px' [routerLink]="['/vuelos']"> <i class='fa fa-chevron-left'></i> Regresar </button>
+                </div>
+
+            </div>
+        </div>
+    </div>
+</div>

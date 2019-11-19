@@ -1,0 +1,27 @@
+  
+   <header>
+
+   <nav class="navbar navbar-dark bg-dark navbar-expand-xl">
+        <h1 class="navbar-brand"><i class="fa fa-plane" aria-hidden="true"></i> Bienvenido a Airlines GT</h1>
+        <button class="navbar-toggler">
+            <span class="navbar-toggler-icon" data-toggle="collapse" data-target="#theMenu"></span>
+        </button>
+        <div id="theMenu" class="navbar-collapse collapse">
+          <ul class="navbar-nav">
+                <li class="nav-item">
+                    <a class="nav-link" (click)="home()"><i class="fa fa-home" aria-hidden="true"></i> Inicio</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" (click)="admin()"><i class="fa fa-lock" aria-hidden="true"></i> Administracion </a>
+                </li>
+          </ul>
+        </div>
+    </nav>
+  </header>
+  <br>
+  <div class="container-fluid" style="background-image: url('https://www.ft.com/__origami/service/image/v2/images/raw/http://prod-upp-image-read.ft.com/81c79ac8-9250-11e7-a9e6-11d2f0ebb7f0?source=next&fit=scale-down&quality=highest&width=1440'); margin-top: -25px">
+ 
+      <router-outlet></router-outlet>
+
+  </div>
+ 
