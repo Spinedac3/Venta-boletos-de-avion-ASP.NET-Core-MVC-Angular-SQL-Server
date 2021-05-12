@@ -22,7 +22,7 @@
     "@angular/router": "~8.2.4",
     "angular-font-awesome": "^3.1.2",
     "bootstrap": "^4.3.1",
-    "chart.js": "^2.8.0",
+    "chart.js": "^2.9.4",
     "font-awesome": "^4.7.0",
     "jquery": "^3.4.1",
     "lodash": "^4.17.15",
